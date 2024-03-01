@@ -51,9 +51,6 @@ class TransactionApi{
   static Future<bool> deleteTransaction(int transactionId) async {
     try{
       final transformedUrl = ("$_url$transactionId/");
-      print("-----------------------------------------------");
-      print(transformedUrl);
-      print("-----------------------------------------------");
       int status = await ApiUtils.deleteData(transformedUrl);
       if(status == 204) {
         return true;
